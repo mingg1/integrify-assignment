@@ -1,6 +1,6 @@
 import React from 'react';
 import { WeatherInfoContextProvider } from './context/WeatherInfoContext';
-import AppContent from './components/AppContent';
+import AppContent from './components/appContent/AppContent';
 
 function App() {
   return (
