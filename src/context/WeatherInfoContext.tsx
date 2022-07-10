@@ -34,7 +34,6 @@ export const WeatherInfoContextProvider = ({
       if (dailyForecasts.length !== 0) setDailyForecasts([]);
 
       const resCity = await fetchUrl(url);
-      setErrorMsg(null);
 
       if (Array.isArray(resCity)) {
         if (resCity.length === 0) {
@@ -43,15 +42,15 @@ export const WeatherInfoContextProvider = ({
 
         resCity.forEach(async (city) => {
           const forecastData = await getDailyForecast(city);
-          setDailyForecasts((cityWeatherForecasts) => [
-            ...cityWeatherForecasts,
-            forecastData,
-          ]);
+          setDailyForecasts(
+            (cityWeatherForecasts) =>
+              [...cityWeatherForecasts, forecastData] as DailyForecast[]
+          );
         });
+        setErrorMsg(null);
         return;
       }
-
-      setDailyForecasts([await getDailyForecast(resCity)]);
+      setDailyForecasts([await getDailyForecast(resCity)] as DailyForecast[]);
     } catch (error: any) {
       setErrorMsg('Something went wrong! Check your network x-(');
     } finally {
