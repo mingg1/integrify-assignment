@@ -34,6 +34,7 @@ REACT_APP_API_KEY=YOUR_API_KEY
 ```
 <br/>
 Then run the command.
+
 ```sh
 npm start
 ```
