@@ -1,8 +1,229 @@
+:root {
+  --main-font: 'Source Serif Pro';
+  --container-color: #d7e0ee9d;
+  --card-color: #ffffffdf;
+  --shadow-color: #7d7c7c78;
+  --accent-color: orange;
+  --hightlight-color: #181886;
+  --light-hightlight-color: #216dfb;
+}
+
 body {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100%;
+  background: url('../images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body * {
   font-family: var(--main-font), -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  background-color: var(--container-color);
+  width: 70%;
+  padding: 4rem;
+  margin: 5rem auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--hightlight-color);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-title {
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 1.9rem;
+}
+
+.search-container {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form,
+.weather-title-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 70%;
+  border: none;
+  border-bottom: black 2px solid;
+  background: transparent;
+  font-size: 2rem;
+  transition: border-bottom 0.6s;
+  text-align: center;
+}
+
+.search-bar:focus-visible {
+  outline: none;
+  border-bottom: var(--light-hightlight-color) 2px solid;
+}
+
+.search-btn {
+  border-radius: 1rem;
+  background: transparent;
+  padding: 1rem;
+  border: 2px black solid;
+  font-size: 1.2rem;
+  transition: all 0.25s;
+}
+
+.search-btn:hover {
+  background-color: var(--hightlight-color);
+  color: white;
+  border-color: var(--hightlight-color);
+  cursor: pointer;
+}
+
+.geolocation-btn {
+  color: var(--hightlight-color);
+  margin-top: 1.2rem;
+  border: none;
+  font-size: 1.4rem;
+  background: transparent;
+  width: fit-content;
+  align-self: center;
+  padding: 0.6rem;
+}
+
+.geolocation-btn:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loading-message,
+.result,
+.error-message {
+  margin-top: 5rem;
+}
+
+.error-message,
+.loading-message {
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.result {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.weather-card {
+  border: var(--hightlight-color) 1px solid;
+  margin: 1.5rem 0;
+  background-color: var(--card-color);
+  box-shadow: 9px 13px 11px 2px var(--shadow-color);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 2rem;
+}
+
+.city {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.area {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.country {
+  padding: 0.3rem 0.6rem;
+  background-color: var(--accent-color);
+  border-radius: 0.6rem;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+}
+
+.forecast-container,
+.temprature-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.temprature {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin: 0 0.5rem;
+}
+
+.forecast-container > * {
+  flex: 1;
+}
+
+.forecast-item,
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.forecast-item {
+  padding: 2rem 1rem;
+  border: 1px var(--hightlight-color) solid;
+}
+
+.forecast-item-title {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--hightlight-color);
+}
+
+.temprature-container {
+  font-size: 1.5rem;
+  gap: 4rem;
+}
+
+.weather-icon {
+  width: 100px;
+}
+
+.precification,
+figcaption {
+  font-size: 1.3rem;
 }
