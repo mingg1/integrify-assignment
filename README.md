@@ -1,46 +1,26 @@
-# Getting Started with Create React App
+# Weather forecast app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌤 Web application to check a daily weather forecast of cities.<br/><br/>
+<div align="center">
+<img width="640" alt="main_page" src="https://user-images.githubusercontent.com/61379336/178159897-178f025e-34aa-43c2-8a1a-c5542e348396.png"></div>
 
-## Available Scripts
+## Demo
+Demo application is available [here](https://weather-forecast-min.netlify.app/).
 
-In the project directory, you can run:
+## Features
+Basically, the application shows names of city, area or province, country, minimum and maximum temperature, and weather conditions of the day and night of the day with an icon.
+If there is a possibility to rain, the app will show the precipitation intensity as well.<br/><br/>
 
-### `npm start`
+- ### Get weather forecast by city name <br/>
+By searching the name of a city, users can get weather information about it.<br/>
+The application will show information of cities that match the search text.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<div align="center">
+<img alt="search" width="640" src="https://user-images.githubusercontent.com/61379336/178159907-7085ff74-5fd5-4bb7-85d8-664539cbd01e.png"></div>
+<br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- ### Get current location's weather forecast <br/><br/>
+By clicking the button under the search bar, users can get a weather forecast of their current location.<br/>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<div align="center">
+<img alt="geo" width="640" src="https://user-images.githubusercontent.com/61379336/178159844-e6bb2f6d-9a1b-43d2-8689-4d36a67259b2.png"></div>
