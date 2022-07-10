@@ -7,7 +7,7 @@ interface CityInfo {
   area: string;
 }
 
-interface ForecastDescription {
+export interface ForecastDescription {
   iconKey: number;
   iconPhrase: string;
   precipitationType?: string;
