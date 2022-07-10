@@ -9,7 +9,7 @@ interface CityInfo {
 
 interface ForecastDescription {
   iconKey: number;
-  iconPhraise: string;
+  iconPhrase: string;
   precipitationType?: string;
   precipitationIntensity?: string;
 }
@@ -38,7 +38,7 @@ export const getCityData = (data: any): CityInfo => {
 
 export const getForecastDescription = (info: any): ForecastDescription => ({
   iconKey: info['Icon'] as number,
-  iconPhraise: info['IconPhraise'] as string,
+  iconPhrase: info['IconPhrase'] as string,
   precipitationType: info['PrecipitationType'],
   precipitationIntensity: info['PrecipitationIntensity'],
 });
